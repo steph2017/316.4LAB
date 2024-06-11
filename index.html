@@ -20,7 +20,16 @@
 
         <!-- Registration Form -->
         <form id="registration">
-          <input name="username" type="text" placeholder="Username" />
+          <input
+          name="username"
+          type="text"
+          placeholder="Username"
+          required
+          min="4"
+          pattern="^(?=.*(\w)).*(?=.*(\w)(?!\1)).*(?=.*(\w)(?!\1)(?!\2)).*$"  
+          title="username must be one word, 4 characters, 3 unique characters, with no special characters."
+          /> 
+          <!-- regex above tries to have pattern that matches 3 unique character. I allow underscores but if didnt want to i would do [a-zA-Z0-9] instead -->
           <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
           <input name="email" type="text" placeholder="Email" />
