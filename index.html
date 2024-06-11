@@ -32,7 +32,14 @@
           <!-- regex above tries to have pattern that matches 3 unique character. I allow underscores but if didnt want to i would do [a-zA-Z0-9] instead -->
           <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-          <input name="email" type="text" placeholder="Email" />
+          <input 
+          name="email" 
+          type="text" 
+          placeholder="Email" 
+          pattern="^[^\s@]+@(?!example\.com$).*$"
+          title="please enter a valid email address"
+          />
+          <!-- pattern is only concerned with wht follows the @ sign since html email input already has validation. -->
           <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
           ><br />
 
